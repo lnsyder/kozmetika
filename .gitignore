@@ -20,3 +20,9 @@
 ###< symfony/phpunit-bridge ###
 /composer.lock
 /symfony.lock
+/.idea/codeception.xml
+/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd
+/.idea/php-docker-settings.xml
+/.idea/phpspec.xml
+/.idea/phpunit.xml
+/.idea/commandlinetools/Symfony_30_08_2024_02_42.xml
