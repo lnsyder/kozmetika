@@ -16,6 +16,7 @@
         "phpdocumentor/reflection-docblock": "^5.4",
         "phpstan/phpdoc-parser": "^1.30",
         "simple-html-dom/simple-html-dom": "^1.5",
+        "sunra/php-simple-html-dom-parser": "^1.5",
         "symfony/asset": "6.1.*",
         "symfony/console": "6.1.*",
         "symfony/doctrine-messenger": "6.1.*",
