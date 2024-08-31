@@ -10,6 +10,11 @@ services:
       - ../:/var/www/html
     depends_on:
       - postgres
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    environment:
+      # IDE'de tanımladığımız Server ismi
+      - PHP_IDE_CONFIG=serverName=development
 
   nginx:
     image: nginx:latest

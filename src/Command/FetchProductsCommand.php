@@ -10,7 +10,7 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use Sunra\PhpSimple\HtmlDomParser;
+//use Sunra\PhpSimple\HtmlDomParser;
 
 #[AsCommand(
     name: 'app:fetch-products',
@@ -34,21 +34,21 @@ class FetchProductsCommand extends Command
         $response = $client->request('GET', 'https://www.gratis.com/makyaj-c-501');
         $html = (string) $response->getBody();
 
-        $dom = HtmlDomParser::str_get_html($html);
+//        $dom = HtmlDomParser::str_get_html($html);
 
         // Ürünleri seçmek için uygun CSS seçicilerini kullanın
-        foreach ($dom->find('.product-item') as $productElement) {
-            $name = $productElement->find('.product-title', 0)->plaintext;
-            $description = $productElement->find('.product-description', 0)->plaintext;
-            $price = $productElement->find('.product-price', 0)->plaintext;
-
-            $product = new Product();
-            $product->setName($name);
-            $product->setDescription($description);
-            $product->setPrice($price);
-
-            $this->entityManager->persist($product);
-        }
+//        foreach ($dom->find('.product-item') as $productElement) {
+//            $name = $productElement->find('.product-title', 0)->plaintext;
+//            $description = $productElement->find('.product-description', 0)->plaintext;
+//            $price = $productElement->find('.product-price', 0)->plaintext;
+//
+//            $product = new Product();
+//            $product->setName($name);
+//            $product->setDescription($description);
+//            $product->setPrice($price);
+//
+//            $this->entityManager->persist($product);
+//        }
 
         $this->entityManager->flush();
 
